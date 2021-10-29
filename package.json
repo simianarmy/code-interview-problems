@@ -1,0 +1,23 @@
+{
+  "name": "cracking-code-interview",
+  "version": "1.0.0",
+  "description": "Sandbox for solving problems from Cracking the Coding Interview 6th Edition (Gayle Laakmann McDowell)",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "run": "npm run build && node dist/index.js",
+    "test": "npm run test"
+  },
+  "keywords": [],
+  "author": "Marc Mauger",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0"
+  }
+}
