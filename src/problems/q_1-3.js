@@ -4,12 +4,13 @@
  * Assume you have space at end of the string for the extra characters.
  *
  * ex: 'Mr John Smith    '
- * Length :17
+ * Length: 17
  * True length: 13
+ * Output :'Mr%20John%20Smith'
  *
  * Solution:
- * Time: O(A)
- * Space: O(A)
+ * Time: O(N) N = length of array
+ * Space: O(1) operates on input array
  **/
 module.exports = (input) => {
   // Convert string to character array for the problem
