@@ -5,7 +5,7 @@
  *
  * Solution:
  * Time: O(N^2)
- * Space: O(N^2)
+ * Space: O(1) in-place, O(N^2) brute force
  **/
 module.exports = (input) => {
   const N = input[0];

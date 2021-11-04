@@ -46,7 +46,7 @@ function main() {
   if (options.data) {
     inputs = options.data;
   } else {
-    inputs = inputString;
+    inputs = inputString.slice(0, -1); // strip trailing ''
   }
   console.log({inputs});
 

@@ -1,0 +1,19 @@
+class Node {
+  d = 0;
+  next = null;
+
+  constructor(val) {
+    this.d = val;
+  }
+
+  append(val) {
+    let end = new Node(val);
+    let n = this;
+    while (n.next) {
+      n = n.next;
+    }
+    n.next = end;
+  }
+}
+
+module.exports = Node;
