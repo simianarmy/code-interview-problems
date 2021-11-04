@@ -5,7 +5,7 @@
  * Time: O(N)
  *
  **/
-const Node = require('../lib/LinkedList');
+const { Node, printAll } = require('../lib/LinkedList');
 
 const solution = (input ) => {
   let head = new Node(input[0]);
@@ -32,15 +32,8 @@ const solution = (input ) => {
     }
   }
 
-  function printList(n) {
-    while (n) {
-      console.log(n.d);
-      n = n.next;
-    }
-  }
-
   removeDuplicates();
-  printList(head);
+  printAll(head);
 
   return;
 };

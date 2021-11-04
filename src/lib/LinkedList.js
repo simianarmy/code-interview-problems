@@ -16,4 +16,18 @@ class Node {
   }
 }
 
-module.exports = Node;
+function  printAll(node) {
+  let all = [];
+  let n = node;
+
+  while (n) {
+    all.push(n.d);
+    n = n.next;
+  }
+  console.log(all);
+}
+
+module.exports = {
+  Node,
+  printAll
+};

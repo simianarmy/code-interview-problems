@@ -3,7 +3,7 @@
  *
  * Solution:
  * Time: O(N)
- *
+ * Space: O(1)
  **/
 const Node = require('../lib/LinkedList');
 
@@ -36,7 +36,7 @@ module.exports = (input) => {
   }
   */
 
-  // recursive version
+  // recursive version O(N)
   function printKth(node, k) {
     if (!node) return 0;
 
