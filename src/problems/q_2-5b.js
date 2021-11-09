@@ -27,4 +27,40 @@ module.exports = (input) => {
   printAll(l2);
 
   // algorithm here
+  class PartialSum {
+    sum = null;
+    carry = 0;
+  }
+
+  /**
+   * @return {PartialSum}
+   */
+  function sumLists(l1, l2) {
+    if (l1 == null || l2 == null) {
+      return new PartialSum();
+    }
+    let sum = sumLists(l1.next, l2.next);
+    console.log({sum});
+
+    // add carry to current val
+    let val = sum.carry + l1.d + l2.d;
+    let fullResult = insertBefore(sum.sum, val % 10);
+
+    sum.sum = fullResult;
+    sum.carry = Math.round(val / 10);
+
+    return sum;
+  }
+
+  function insertBefore(list, val) {
+    let node = new Node(val);
+    if (list) {
+      node.next = list;
+    }
+    return node;
+  }
+
+  const res = sumLists(l1, l2);
+  console.log({res});
+  printAll(res.sum);
 }
