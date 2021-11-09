@@ -1,3 +1,5 @@
+// TODO: The linkedlist class
+//
 class Node {
   d = 0;
   next = null;
